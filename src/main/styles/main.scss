@@ -1,0 +1,101 @@
+@import "spinner";
+
+$background_color: aliceblue;
+$accent_color_1: linen;
+$accent_color_2: #CCCCFF;
+$border_color_1: indianred;
+
+$large_font_size: 2.2rem;
+$medium_font_size: 1.2rem;
+$small_font_size: 0.9rem;
+
+.app-container {
+  background-color: $background_color;
+  font-family: "Quicksand", sans-serif;
+  min-height: 100vh;
+
+  .landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .intro {
+      font-size: $large_font_size;
+      padding: 10vh;
+      text-align: center;
+    }
+
+    .search {
+      font-size: $medium_font_size
+    }
+
+    .button-group {
+      padding: 15px;
+
+      button {
+        cursor: pointer;
+        margin: 0 2px;
+      }
+    }
+
+    .pictures-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      .picture {
+        background-color: white;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        padding: 10px;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 500px;
+        }
+      }
+
+      .description {
+        margin: 10px 0;
+        font-size: $medium_font_size;
+        background-color: $accent_color_1;
+      }
+
+      .tags-container {
+        display: flex;
+
+        .tag {
+          font-size: $small_font_size;
+          background-color: $accent_color_2;
+          padding: 0 5px;
+          margin: 5px;
+          border-radius: 1px / 3px;
+          border: 1px solid $border_color_1;
+        }
+
+      }
+
+      .color-container {
+        color: #fff;
+        height: 25px;
+        width: 125px;
+        text-align: center;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .pictures-container {
+    display: inline-block !important;
+  }
+}
+
+
+body {
+  margin: 0 !important;
+}
